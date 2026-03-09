@@ -1,0 +1,200 @@
+{
+  "version": 7,
+  "promptModules": {
+    "app_guide_ios": "prompts/app_guide_ios.md",
+    "app_guide_macos": "prompts/app_guide_macos.md",
+    "geometry_reference": "prompts/geometry_reference.md",
+    "material_reference": "prompts/material_reference.md",
+    "light_reference": "prompts/light_reference.md",
+    "camera_reference": "prompts/camera_reference.md",
+    "animation_reference": "prompts/animation_reference.md",
+    "coordinate_system": "prompts/coordinate_system.md",
+    "tool_api": "prompts/tool_api.md",
+    "tool_format_local": "prompts/tool_format_local.md",
+    "workflow_examples": "prompts/workflow_examples.md",
+    "guide_workflows_ios": "prompts/guide_workflows_ios.md",
+    "guide_workflows_macos": "prompts/guide_workflows_macos.md"
+  },
+  "models": [
+    {
+      "id": "llama-3.2-1b-4bit",
+      "displayName": "Llama 3.2 1B",
+      "family": "Llama",
+      "parameterCount": "1B",
+      "quantization": "4-bit",
+      "downloadSizeMB": 700,
+      "ramRequiredMB": 1200,
+      "huggingFaceRepo": "mlx-community/Llama-3.2-1B-Instruct-4bit",
+      "chatTemplate": "llama3",
+      "capabilities": {
+        "sceneCreation": false,
+        "toolUseQuality": "none"
+      },
+      "description": "Ultra-lightweight chat model. Fast responses but no scene manipulation.",
+      "promptModules": ["app_guide_{device}", "guide_workflows_{device}", "geometry_reference", "material_reference"]
+    },
+    {
+      "id": "qwen-3-1.7b-4bit",
+      "displayName": "Qwen 3 1.7B",
+      "family": "Qwen",
+      "parameterCount": "1.7B",
+      "quantization": "4-bit",
+      "downloadSizeMB": 1200,
+      "ramRequiredMB": 1800,
+      "huggingFaceRepo": "mlx-community/Qwen3-1.7B-4bit",
+      "chatTemplate": "qwen3",
+      "supportsThinking": true,
+      "thinkingTagFormat": "<think>|</think>",
+      "capabilities": {
+        "sceneCreation": false,
+        "toolUseQuality": "none"
+      },
+      "description": "Smallest model with thinking mode. Great chat quality for its size.",
+      "promptModules": ["app_guide_{device}", "guide_workflows_{device}", "geometry_reference", "material_reference", "light_reference"]
+    },
+    {
+      "id": "llama-3.2-3b-4bit",
+      "displayName": "Llama 3.2 3B",
+      "family": "Llama",
+      "parameterCount": "3B",
+      "quantization": "4-bit",
+      "downloadSizeMB": 1800,
+      "ramRequiredMB": 2500,
+      "huggingFaceRepo": "mlx-community/Llama-3.2-3B-Instruct-4bit",
+      "chatTemplate": "llama3",
+      "capabilities": {
+        "sceneCreation": false,
+        "toolUseQuality": "none"
+      },
+      "description": "Good for chat and scene Q&A. Cannot create objects.",
+      "promptModules": ["app_guide_{device}", "guide_workflows_{device}", "geometry_reference", "material_reference", "light_reference", "animation_reference"]
+    },
+    {
+      "id": "gemma-3n-e4b-4bit",
+      "displayName": "Gemma 3n E4B",
+      "family": "Gemma",
+      "parameterCount": "4B",
+      "quantization": "4-bit",
+      "downloadSizeMB": 2600,
+      "ramRequiredMB": 3200,
+      "huggingFaceRepo": "mlx-community/gemma-3n-E4B-it-4bit",
+      "chatTemplate": "gemma",
+      "capabilities": {
+        "sceneCreation": false,
+        "toolUseQuality": "none"
+      },
+      "description": "Efficient new architecture from Google. Runs like a 4B with less memory.",
+      "promptModules": ["app_guide_{device}", "guide_workflows_{device}", "geometry_reference", "material_reference", "light_reference", "animation_reference"]
+    },
+    {
+      "id": "gemma-3-4b-4bit",
+      "displayName": "Gemma 3 4B",
+      "family": "Gemma",
+      "parameterCount": "4B",
+      "quantization": "4-bit",
+      "downloadSizeMB": 2500,
+      "ramRequiredMB": 3500,
+      "huggingFaceRepo": "mlx-community/gemma-3-4b-it-4bit",
+      "chatTemplate": "gemma",
+      "capabilities": {
+        "sceneCreation": false,
+        "toolUseQuality": "none"
+      },
+      "description": "Great for chat, explanations, and scene analysis. No scene creation.",
+      "promptModules": ["app_guide_{device}", "guide_workflows_{device}", "geometry_reference", "material_reference", "light_reference", "animation_reference"]
+    },
+    {
+      "id": "phi-4-mini-reasoning-4bit",
+      "displayName": "Phi-4 Mini Reasoning",
+      "family": "Phi",
+      "parameterCount": "3.8B",
+      "quantization": "4-bit",
+      "downloadSizeMB": 2300,
+      "ramRequiredMB": 3200,
+      "huggingFaceRepo": "mlx-community/Phi-4-mini-reasoning-4bit",
+      "chatTemplate": "phi3",
+      "supportsThinking": true,
+      "thinkingTagFormat": "<think>|</think>",
+      "alwaysThinks": true,
+      "capabilities": {
+        "sceneCreation": false,
+        "toolUseQuality": "none"
+      },
+      "description": "Strong reasoning with chain-of-thought. Always shows its thinking process.",
+      "promptModules": ["app_guide_{device}", "guide_workflows_{device}", "geometry_reference", "material_reference", "light_reference", "animation_reference", "coordinate_system"]
+    },
+    {
+      "id": "deepseek-r1-distill-qwen-7b-4bit",
+      "displayName": "DeepSeek R1 Distill 7B",
+      "family": "DeepSeek",
+      "parameterCount": "7B",
+      "quantization": "4-bit",
+      "downloadSizeMB": 4500,
+      "ramRequiredMB": 5500,
+      "huggingFaceRepo": "mlx-community/DeepSeek-R1-Distill-Qwen-7B-4bit",
+      "chatTemplate": "qwen2",
+      "supportsThinking": true,
+      "thinkingTagFormat": "<think>|</think>",
+      "alwaysThinks": true,
+      "capabilities": {
+        "sceneCreation": false,
+        "toolUseQuality": "none"
+      },
+      "description": "Best reasoning at this size. Distilled from DeepSeek R1. Always thinks step-by-step.",
+      "promptModules": ["app_guide_{device}", "guide_workflows_{device}", "geometry_reference", "material_reference", "light_reference", "animation_reference", "coordinate_system"]
+    },
+    {
+      "id": "phi-4-mini-4bit",
+      "displayName": "Phi-4 Mini 3.8B",
+      "family": "Phi",
+      "parameterCount": "3.8B",
+      "quantization": "4-bit",
+      "downloadSizeMB": 2300,
+      "ramRequiredMB": 3200,
+      "huggingFaceRepo": "mlx-community/Phi-4-mini-instruct-4bit",
+      "chatTemplate": "phi3",
+      "capabilities": {
+        "sceneCreation": true,
+        "toolUseQuality": "good"
+      },
+      "description": "Strong reasoning. Good at following tool-call instructions.",
+      "promptModules": ["geometry_reference", "material_reference", "light_reference", "animation_reference", "coordinate_system", "tool_api", "tool_format_local"]
+    },
+    {
+      "id": "qwen-3-4b-4bit",
+      "displayName": "Qwen 3 4B",
+      "family": "Qwen",
+      "parameterCount": "4B",
+      "quantization": "4-bit",
+      "downloadSizeMB": 2800,
+      "ramRequiredMB": 3500,
+      "huggingFaceRepo": "mlx-community/Qwen3-4B-4bit",
+      "chatTemplate": "qwen3",
+      "supportsThinking": true,
+      "thinkingTagFormat": "<think>|</think>",
+      "capabilities": {
+        "sceneCreation": true,
+        "toolUseQuality": "good"
+      },
+      "description": "Best small Creator model. Strong tool calling with optional thinking mode.",
+      "promptModules": ["geometry_reference", "material_reference", "light_reference", "animation_reference", "coordinate_system", "tool_api", "tool_format_local"]
+    },
+    {
+      "id": "qwen-2.5-7b-4bit",
+      "displayName": "Qwen 2.5 7B",
+      "family": "Qwen",
+      "parameterCount": "7B",
+      "quantization": "4-bit",
+      "downloadSizeMB": 4500,
+      "ramRequiredMB": 5500,
+      "huggingFaceRepo": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "chatTemplate": "qwen2",
+      "capabilities": {
+        "sceneCreation": true,
+        "toolUseQuality": "good"
+      },
+      "description": "Proven reliable for scene creation. Best tool use accuracy at 7B.",
+      "promptModules": ["geometry_reference", "material_reference", "light_reference", "animation_reference", "coordinate_system", "tool_api", "tool_format_local"]
+    }
+  ]
+}
