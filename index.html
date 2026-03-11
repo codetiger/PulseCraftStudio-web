@@ -5,24 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO -->
-  <title>PulseCraft Studio - 3D Animation Editor & Renderer for iPhone & iPad</title>
-  <meta name="description" content="Create 3D scenes, keyframe-animate everything, and render cinematic videos up to 4K — right on iOS. PulseCraft Studio is a full 3D animation pipeline for iPhone and iPad.">
-  <meta name="keywords" content="3D animation, iOS, iPhone, iPad, 3D editor, ray tracing, Metal, RealityKit, USDZ, keyframe animation, PBR materials, 4K render, scene builder">
+  <title>PulseCraft Studio - 3D Animation Editor & AI Scene Builder for iPhone, iPad & Mac</title>
+  <meta name="description" content="Create 3D scenes with AI, keyframe-animate everything, and render cinematic videos up to 4K — right on iPhone, iPad, or Mac. PulseCraft Studio is a full 3D animation pipeline with a built-in AI assistant.">
+  <meta name="keywords" content="3D animation, iOS, iPhone, iPad, Mac, 3D editor, ray tracing, Metal, RealityKit, USDZ, GLB, keyframe animation, PBR materials, 4K render, scene builder, AI scene editor, Claude, GPT, Gemini, on-device AI">
   <meta name="author" content="PulseCraft Studio">
   <link rel="canonical" href="https://pulsecraftstudio.com/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="PulseCraft Studio - 3D Animation Editor & Renderer for iOS">
-  <meta property="og:description" content="Build 3D worlds, animate anything, and export cinematic videos up to 4K. A full 3D animation pipeline on iPhone and iPad.">
+  <meta property="og:title" content="PulseCraft Studio - 3D Animation Editor & AI Scene Builder for iPhone, iPad & Mac">
+  <meta property="og:description" content="Build 3D worlds with AI, animate anything, and export cinematic videos up to 4K. A full 3D animation pipeline on iPhone, iPad, and Mac.">
   <meta property="og:image" content="https://pulsecraftstudio.com/assets/og-image.jpg">
   <meta property="og:url" content="https://pulsecraftstudio.com/">
   <meta property="og:site_name" content="PulseCraft Studio">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PulseCraft Studio - 3D Animation Editor & Renderer for iOS">
-  <meta name="twitter:description" content="Build 3D worlds, animate anything, and export cinematic videos up to 4K on iPhone and iPad.">
+  <meta name="twitter:title" content="PulseCraft Studio - 3D Animation Editor & AI Scene Builder for iPhone, iPad & Mac">
+  <meta name="twitter:description" content="Build 3D worlds with AI, animate anything, and export cinematic videos up to 4K on iPhone, iPad, and Mac.">
   <meta name="twitter:image" content="https://pulsecraftstudio.com/assets/og-image.jpg">
 
   <!-- App Banner & Icons -->
@@ -36,8 +36,8 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "PulseCraft Studio",
-    "description": "A powerful 3D scene builder and animation editor for iPhone and iPad. Create complete 3D worlds, keyframe-animate anything, and export cinematic videos.",
-    "operatingSystem": "iOS",
+    "description": "A powerful 3D scene builder and animation editor with a built-in AI assistant for iPhone, iPad, and Mac. Create complete 3D worlds, keyframe-animate anything, and export cinematic videos.",
+    "operatingSystem": "iOS, macOS",
     "applicationCategory": "MultimediaApplication",
     "offers": {
       "@type": "Offer",
@@ -189,6 +189,8 @@
     .feature-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 6px; }
     .feature-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
 
+    .ai-features .feature-card { border-color: rgba(155,109,255,0.18); }
+
     /* ---------- Primitives ---------- */
     .primitives { padding: 48px 0; }
 
@@ -266,10 +268,10 @@
     <div class="container">
       <img src="assets/app-icon.jpg" alt="PulseCraft Studio app icon" class="app-icon" width="120" height="120">
       <h1>PulseCraft Studio</h1>
-      <p class="tagline">3D Animation Editor &amp; Renderer</p>
+      <p class="tagline">3D Animation Editor &amp; AI Scene Builder</p>
       <p class="description">
-        A powerful 3D scene builder and animation editor made for iPhone and iPad.
-        Create complete 3D worlds, keyframe-animate anything, and export cinematic videos&nbsp;&mdash; right on iOS.
+        Create, animate, and render beautiful 3D scenes&nbsp;&mdash; right on your iPhone, iPad, or Mac.
+        With a built-in AI assistant that builds scenes through natural language, no 3D experience required.
       </p>
       <a href="https://apps.apple.com/in/app/pulsecraft-studio/id6502294305" class="app-store-badge" target="_blank" rel="noopener">
         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="156" height="54">
@@ -286,6 +288,13 @@
         <p class="section-subtitle">From Cornell boxes to colorful scenes&nbsp;&mdash; render photoreal results right on your device.</p>
         <div class="gallery-wrapper" role="region" aria-roledescription="carousel" aria-label="Render showcase">
           <div class="gallery-track" id="galleryTrack">
+            <figure class="gallery-slide">
+              <img src="assets/render3.jpg" alt="Detailed kitchen scene with furniture, appliances, and natural lighting, rendered in PulseCraft Studio" width="960" height="540" loading="lazy">
+              <figcaption>
+                <h3>Kitchen Interior</h3>
+                <p>Complex imported scene with detailed geometry, natural lighting, and realistic materials.</p>
+              </figcaption>
+            </figure>
             <figure class="gallery-slide">
               <img src="assets/render1.jpg" alt="Cornell Box with reflective spheres and soft shadows, rendered in PulseCraft Studio" width="960" height="710" loading="lazy">
               <figcaption>
@@ -304,6 +313,56 @@
           <button class="gallery-nav prev" id="galleryPrev" aria-label="Previous slide">&#8249;</button>
           <button class="gallery-nav next" id="galleryNext" aria-label="Next slide">&#8250;</button>
           <div class="gallery-dots" id="galleryDots" role="tablist" aria-label="Gallery slides"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Scene Editor -->
+    <section class="features ai-features" aria-label="AI Scene Editor">
+      <div class="container">
+        <h2 class="section-title">AI Scene Editor</h2>
+        <p class="section-subtitle">Describe what you want and watch it appear. Create entire scenes, modify objects, set up animations, and adjust materials&nbsp;&mdash; all through conversation.</p>
+        <div class="features-grid">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">&#128488;</span>
+            <h3>Natural Language</h3>
+            <p>&ldquo;Add a red sphere on top of a blue box&rdquo;&nbsp;&mdash; batch-create up to 20 shapes, lights, and cameras in one go. Modify up to 50 objects at once.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">&#127757;</span>
+            <h3>Cloud &amp; On-Device AI</h3>
+            <p>Choose from Claude, GPT, Gemini, or DeepSeek in the cloud. Or run 10 local models from Llama, Qwen, Gemma, Phi&nbsp;&mdash; no API key needed.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">&#127916;</span>
+            <h3>AI Animation</h3>
+            <p>&ldquo;Make the camera orbit around the scene over 4 seconds&rdquo;&nbsp;&mdash; set up to 200 keyframes per request. The AI handles timing and interpolation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ray Tracing -->
+    <section class="features" aria-label="Ray Tracing Renderer">
+      <div class="container">
+        <h2 class="section-title">Metal-Powered Ray Tracing</h2>
+        <p class="section-subtitle">Render photorealistic images and videos directly on your device using a physically-based path tracer.</p>
+        <div class="features-grid">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">&#128161;</span>
+            <h3>Global Illumination</h3>
+            <p>Light bounces naturally through your scene with up to 8 bounces for realistic indirect lighting, soft shadows, and natural shadow falloff.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">&#128142;</span>
+            <h3>Glass &amp; Refraction</h3>
+            <p>Dielectric refraction with index of refraction control for glass, water, and crystal materials. Clearcoat for car paint and polished surfaces.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">&#127909;</span>
+            <h3>Depth of Field</h3>
+            <p>Camera lens simulation with adjustable focal distance and aperture. Built-in denoiser for cleaner results at lower sample counts.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -336,12 +395,12 @@
           <article class="feature-card">
             <span class="feature-icon" aria-hidden="true">&#127916;</span>
             <h3>Export Up to 4K</h3>
-            <p>Render HEVC MP4 videos or PNG stills at 480p, 720p, 1080p, or 4K UHD. Preview before export, then share via the iOS Share Sheet.</p>
+            <p>Render HEVC MP4 videos or PNG stills at 480p, 720p, 1080p, or 4K UHD. From quick 8-sample previews to production-quality 512-sample renders.</p>
           </article>
           <article class="feature-card">
-            <span class="feature-icon" aria-hidden="true">&#128400;</span>
-            <h3>Designed for Touch</h3>
-            <p>Tap to select, drag to orbit, pinch to zoom, long-press to focus. Color-coded XYZ gizmos and full undo/redo for confident editing.</p>
+            <span class="feature-icon" aria-hidden="true">&#128229;</span>
+            <h3>Import &amp; Export</h3>
+            <p>Import USDZ and GLB models with skeletons, animations, and materials preserved. Export PNG stills or HEVC MP4 videos at 60 fps.</p>
           </article>
         </div>
       </div>
@@ -351,7 +410,7 @@
     <section class="primitives" aria-label="Built-in 3D primitives">
       <div class="container">
         <h2 class="section-title">Built-in 3D Primitives</h2>
-        <p class="section-subtitle">Start creating instantly with 11 built-in shapes, or import your own USDZ models.</p>
+        <p class="section-subtitle">Start creating instantly with 11 built-in shapes, or import your own USDZ and GLB models.</p>
         <div class="primitives-grid">
           <div class="primitive-card"><img src="assets/cube.jpg" alt="3D box primitive" width="280" height="280" loading="lazy"><span>Box</span></div>
           <div class="primitive-card"><img src="assets/sphere.jpg" alt="3D sphere primitive" width="280" height="280" loading="lazy"><span>Sphere</span></div>
@@ -391,7 +450,7 @@
   <section class="cta" aria-label="Download">
     <div class="container">
       <h2>Your 3D Animation Pipeline, Anywhere</h2>
-      <p>Whether you're prototyping motion ideas, learning 3D, or creating social content&nbsp;&mdash; PulseCraft Studio has you covered.</p>
+      <p>Whether you're prototyping motion ideas, learning 3D, or creating social content&nbsp;&mdash; PulseCraft Studio runs on iPhone, iPad, and Mac with no subscriptions required.</p>
       <a href="https://apps.apple.com/in/app/pulsecraft-studio/id6502294305" class="app-store-badge" target="_blank" rel="noopener">
         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="156" height="54">
       </a>
@@ -400,7 +459,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 PulseCraft Studio. All rights reserved.</p>
+      <p>&copy; 2025&ndash;2026 PulseCraft Studio. All rights reserved.</p>
     </div>
   </footer>
 
